@@ -352,15 +352,25 @@ section { padding: 100px 40px; }
 }
 .before-after .section-header h2 { color: var(--white); }
 .before-after .section-header p { color: rgba(255,255,255,0.8); }
-.ba-image-wrap {
-  max-width: 750px;
-  margin: 0 auto;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.4);
-  border: 4px solid rgba(255,255,255,0.2);
+.video-showcase {
+  display: flex;
+  justify-content: center;
 }
-.ba-image-wrap img { width: 100%; display: block; }
+.video-frame {
+  width: 320px;
+  max-height: 570px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+  border: 4px solid rgba(255,255,255,0.25);
+  background: #000;
+}
+.video-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 /* ===== HOW IT WORKS ===== */
 .how-it-works { background: var(--cream); }
