@@ -555,7 +555,7 @@ section { padding: 100px 40px; }
   overflow: hidden;
 }
 .cta-badge {
-  width: 90px;
+  width: 130px;
   border-radius: 50%;
   margin-bottom: 20px;
   position: relative;
@@ -665,7 +665,7 @@ section { padding: 100px 40px; }
   padding: 50px 40px 30px;
   text-align: center;
 }
-.footer-logo { height: 90px; border-radius: 10px; margin-bottom: 20px; }
+.footer-logo { height: 130px; border-radius: 10px; margin-bottom: 20px; }
 .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 25px; list-style: none; flex-wrap: wrap; }
 .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s; font-size: 0.9rem; }
 .footer-links a:hover { color: var(--orange-light); }
