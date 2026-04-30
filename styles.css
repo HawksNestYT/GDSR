@@ -154,7 +154,8 @@ body::before {
   color: var(--cream);
   font-size: 0.85rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 34px;
+  display: inline-flex;
   backdrop-filter: blur(8px);
   animation: fadeInUp 0.8s ease;
 }
@@ -553,6 +554,13 @@ section { padding: 100px 40px; }
   position: relative;
   overflow: hidden;
 }
+.cta-badge {
+  width: 90px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  position: relative;
+  filter: drop-shadow(0 6px 15px rgba(0,0,0,0.3));
+}
 .cta-banner::before {
   content: '';
   position: absolute;
@@ -657,7 +665,7 @@ section { padding: 100px 40px; }
   padding: 50px 40px 30px;
   text-align: center;
 }
-.footer-logo { height: 60px; border-radius: 10px; margin-bottom: 20px; }
+.footer-logo { height: 90px; border-radius: 10px; margin-bottom: 20px; }
 .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 25px; list-style: none; flex-wrap: wrap; }
 .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s; font-size: 0.9rem; }
 .footer-links a:hover { color: var(--orange-light); }
