@@ -14,8 +14,17 @@ Goal: as much Linux-level control as possible, minimal Android bloat and restric
 
 ### Samsung specifics
 - **US Snapdragon Galaxy phones have locked bootloaders.** No root, no custom ROMs, no native Linux. So: **Option A (+B, maybe D)**.
-- International Exynos models can usually unlock, but that permanently trips Knox (Samsung Pay/Secure Folder stop working).
+- **One UI 8 reportedly removed bootloader unlocking on international models too** (reported mid-2025 from firmware analysis). On One UI 8+, assume no unlocking.
+- Even when a Samsung *can* unlock, modern Galaxy flagships have almost no native Linux support (GPU, modem, power management). Unlocking also permanently trips Knox.
 - Samsung's old "Linux on DeX" was discontinued.
+- **Android Linux Terminal (Option D) on Samsung:** a real Debian VM. Support is patchy. It appeared on some One UI 8 devices (Z Flip 7, Tab S11) but not others (S25/S23 reports). One UI 8.5 added graphical Linux apps + shared-folder access, reported on Exynos models. Check Developer Options for **"Linux development environment"**.
+- **DeX is the Samsung superpower:** phone + USB‑C monitor + keyboard = a desktop. Termux (+ Termux:X11 for a full XFCE desktop) or the Linux Terminal runs in DeX windows, which makes it a pocket cyberdeck brain.
+
+### Check YOUR Samsung (2 minutes)
+1. Settings → About phone: **model number** (`SM-S928U` / `U1` = US Snapdragon → locked; `B`/no suffix = international)
+2. Settings → About phone → Software information: **One UI version + Android version**
+3. Developer Options: is **"OEM unlocking"** there? Is **"Linux development environment"** there?
+4. Settings → About phone → RAM / storage
 
 ### Recommended setup
 - **Samsung (strongest):** **Option A** — debloat with ADB, Termux, the stack running natively. Your powerful pocket hub.
