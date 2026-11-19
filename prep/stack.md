@@ -69,6 +69,28 @@ hub/
 - **Android kills background processes** (the "phantom process killer"). Turn off child-process restrictions in Developer Options (Android 14+), or disable it with an ADB command on 12–13. See [phone-linux.md](phone-linux.md).
 - **Model memory:** a quantized model needs roughly its file size in RAM, plus ~1–2 GB for context. Phones have to leave room for the OS.
 
+## Power tiers — don't run the AI box just to serve the library
+The library (kiwix-serve + maps + dashboard) needs very little power. The AI needs a lot. So we split them:
+
+| Tier | Hardware | Draw | Always on? | Serves |
+|---|---|---|---|---|
+| **Library node** | Raspberry Pi 5 (8–16 GB) + NVMe, **or** the Samsung phone | ~3–8 W | Yes | Library, maps, dashboard, mesh messages, small AI (1–4B) |
+| **AI node** | Laptop now → Strix Halo-class later | 10–15 W idle, 60–140 W working | **On demand** | Big models, coding |
+
+The dashboard always runs on the library node and sends "Ask" requests to the AI node when it's awake (wake-on-LAN or a power button), falling back to the small local model otherwise. On a 300 Wh deck battery that means **days** of library service instead of hours.
+
+Reference: **Internet-in-a-Box (IIAB)** is an established open-source project doing Kiwix + Kolibri + OSM on a Raspberry Pi. Worth borrowing ideas from.
+
+## More content sources (from the community)
+- **Kolibri** (Learning Equality): offline K‑12 learning platform with Khan Academy videos/exercises and many curricula. Better for kids' education than a bare ZIM
+- **YouTube → ZIM:** Kiwix's `youtube2zim` scraper turns a channel/playlist into an offline ZIM (repair, medical, gardening, radio how-to channels). Respect creators' terms; this is for personal offline use
+- **Setup wizard idea:** a content picker with a storage-budget bar (pick packs → see GB used vs. free → download). We'll build our own as a script/page
+
+## Lessons from other builders
+- **Indexing is everything.** Use ZIMs that include a **full-text index** (most do), and give the dashboard **one search box across all ZIMs + PDFs**
+- **No spinning hard drives for the AI.** Models and indexes on **NVMe/SSD**; an HDD + low RAM bogs everything down. HDDs are OK only for cold backups/media
+- Low power matters more than raw power for a doomsday box. Hence the tiers above
+
 ## Build milestones
 - [ ] **M1** — `hub/` layout + kiwix-serve running with WikiMed on the laptop and the phone
 - [ ] **M2** — llama-server running a model on both; measure tokens/sec

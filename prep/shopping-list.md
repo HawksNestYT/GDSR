@@ -24,6 +24,8 @@ Prices are rough estimates. Priority **A** = buy now · **B** = within a month �
 | ⬜ | USB‑C portable monitor 15" | 3 | C | 80–200 | |
 | ⬜ | Compact keyboard | 3 | C | 25–80 | |
 | ⬜ | Ham Technician exam + FCC fee | 4 | C | ~50 | |
+| ⬜ | Raspberry Pi 5 (8–16 GB) + NVMe HAT + 1–2 TB NVMe + case | 1/3 | B | 150–300 | Always-on low-power library node |
+| ⬜ | Seeed XIAO ESP32S3 + Wio‑SX1262 LoRa kit | 2 | B | 10–20 | Cheap DIY Meshtastic node |
 | ⬜ | 3D printer (Bambu A1 / P1S‑P2S class) | 3 | B | 300–900 | Enclosed if you want ASA |
 | ⬜ | Filament: PETG, ASA, TPU | 3 | B | 20–30/kg | |
 | ⬜ | RTL‑SDR Blog V4 kit | 3 | B | 40–60 | NOAA, scanner, weather sats |
