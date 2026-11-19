@@ -49,9 +49,9 @@ Two numbers decide AI ability: **memory size** (which models fit) and **memory b
 
 | Tier | Machine | Memory | Best models it runs (2025–26 class) | Offline vibecoding | Power (idle / AI) | Power input | Est. $ |
 |---|---|---|---|---|---|---|---|
-| **1 — Budget** | Ryzen 7 8845HS / Ryzen AI 9 HX 370 mini PC, **64 GB** | 64 GB DDR5 (shared) | gpt-oss-20b, Qwen3‑30B‑A3B / Qwen3‑Coder‑30B‑A3B (MoE) | Small scripts, fixes, explanations | ~8–12 W / 45–65 W | often 19 V barrel or USB‑C | 600–1,000 |
-| **2 — Sweet spot ★** | **Ryzen AI Max+ 395 "Strix Halo", 128 GB** (Framework Desktop, GMKtec EVO‑X2, Beelink, etc.) | 128 GB unified, ~96 GB+ usable for AI | **gpt-oss-120b**, GLM‑4.5‑Air‑class, 70B dense | **Real multi-file projects** with an agent (slower than cloud, but it works) | ~10–15 W / 60–140 W (adjustable TDP) | varies — **pick a DC-input model** | 1,800–2,800 |
-| **3 — Max** | **NVIDIA DGX Spark** (GB10), 128 GB | 128 GB unified + CUDA | same size class as Tier 2, **much faster prompt processing** | Best for coding agents with big context | low idle / up to ~240 W | **USB‑C PD** (great for a deck) | 3,500–4,500 |
+| **1 — Budget** | Ryzen 7 8845HS / Ryzen AI 9 HX 370 mini PC, **64 GB** | 64 GB DDR5 (shared) | gpt-oss-20b, Qwen3‑30B‑A3B / Qwen3‑Coder‑30B‑A3B (MoE) | Small scripts, fixes, explanations | ~8–12 W / 45–65 W | often 19 V barrel or USB‑C | 600–1,200 (RAM prices up — check) |
+| **2 — Sweet spot ★** | **Ryzen AI Max+ 395 "Strix Halo", 128 GB** (Framework Desktop, GMKtec EVO‑X2, Beelink, etc.) | 128 GB unified, ~96 GB+ usable for AI | **gpt-oss-120b**, GLM‑4.5‑Air‑class, 70B dense | **Real multi-file projects** with an agent (slower than cloud, but it works) | ~10–15 W / 60–140 W (adjustable TDP) | varies (many have internal AC PSUs — check) | **3,400–4,400** (Nov 2026; launched ~$2k, then the RAM shortage hit) |
+| **3 — Max** | **NVIDIA DGX Spark** (GB10), 128 GB | 128 GB unified + CUDA | same size class as Tier 2, **much faster prompt processing** | Best for coding agents with big context | low idle / up to ~240 W | **USB‑C PD** (great for a deck) | ~4,000–4,700 |
 | Alt — efficiency | Mac mini M4 Pro 64 GB / Mac Studio M4 Max 128 GB | unified, high bandwidth | Tier 2 class (Studio) | Good | very low idle | **AC only** (needs inverter) | 2,000–4,000+ |
 
 **Recommendation: Tier 2, 128 GB.** Best intelligence per watt per dollar, x86 (runs anything, including Windows if ever needed), adjustable power limit for battery mode. Get **128 GB, not 64**: memory is the ceiling, and you can't upgrade it later (it's soldered). Tier 3 is worth it only if offline coding is a top priority and the budget allows.
@@ -176,5 +176,5 @@ Dashboard tiles: Library · Maps (GPS position) · Ask the Librarian (AI) · **M
 | Build | Contents | Est. total |
 |---|---|---|
 | **Mk I** | 2070 laptop guts, Apache case, portable touchscreen, keyboard, router, Meshtastic, RTL‑SDR, GPS, wiring | **$350–600** |
-| **Mk II** | + Strix Halo 64–128 GB (or Mac mini), internal LiFePO4 + distribution, better screen | **$2,000–4,000** |
+| **Mk II** | + Strix Halo 128 GB (or equivalent), internal battery + distribution, better screen | **$4,000–5,500** (at Nov 2026 prices) |
 | Printer + filament | | $400–1,000 |

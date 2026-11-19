@@ -31,6 +31,6 @@ Prices are rough estimates. Priority **A** = buy now · **B** = within a month �
 | ⬜ | Pinecil soldering iron + mini multimeter | 3 | B | 50–80 | |
 | ⬜ | Trackball | 3 | C | 30–60 | |
 | ⬜ | XT60/Anderson bulkhead, fuse block, buck converters, meter, switch | 3 | C | 60–120 | |
-| ⬜ | Compute upgrade: Strix Halo 64–128 GB mini PC (or Mac mini M4 Pro) | 3 | C | 1,400–2,800 | Check power input |
+| ⬜ | Compute upgrade: Strix Halo 128 GB mini PC | 3 | C | 3,400–4,400 | Nov 2026 RAM-shortage prices; buy LAST; check power input |
 
 **Rough total for A-priority items:** ~$450–750 depending on how many cards and nodes you buy.
