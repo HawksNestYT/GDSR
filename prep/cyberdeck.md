@@ -43,12 +43,22 @@ A rugged, self-powered field station: offline library + local AI + maps + comms 
 ### 2. Compute — "a competent AI model"
 The model you can run depends on **memory the AI can use**. In 2025–26, **mixture-of-experts (MoE)** models (e.g. the gpt-oss / Qwen3‑30B‑A3B class) give big-model quality at small-model speed. That favors machines with lots of unified/shared memory.
 
-| Tier | Machine | AI memory | What it runs | Power | Est. $ |
-|---|---|---|---|---|---|
-| **Mk I (free)** | The 2070 laptop (guts or whole) | 8 GB VRAM + system RAM | 7–9B well; ~20–30B MoE slowly | 60–180 W | $0 |
-| Budget | Ryzen 7/9 mini PC (8845HS/AI 9 class), 64 GB RAM | shared, 64 GB | 20–30B MoE at usable speed | 35–80 W | 500–900 |
-| **Best balance (recommended)** | **AMD Ryzen AI Max+ 395 "Strix Halo" mini PC, 64–128 GB** (Framework Desktop, GMKtec, Beelink, etc.) | up to ~96 GB+ for AI | 70B dense, ~100B+ MoE (gpt-oss-120b class) | 50–140 W (adjustable) | 1,500–2,800 |
-| Most efficient | Mac mini M4 Pro, 48–64 GB | unified | 30–70B | very low idle; ~40–80 W load | 1,400–2,200 |
+**Decision:** the 2070 laptop stays whole as the home hub server + dev bench. The deck gets its own mini PC.
+
+Two numbers decide AI ability: **memory size** (which models fit) and **memory bandwidth** (how fast they talk). For offline *vibecoding*, also **prompt processing** (how fast it reads big code files), where NVIDIA is strongest.
+
+| Tier | Machine | Memory | Best models it runs (2025–26 class) | Offline vibecoding | Power (idle / AI) | Power input | Est. $ |
+|---|---|---|---|---|---|---|---|
+| **1 — Budget** | Ryzen 7 8845HS / Ryzen AI 9 HX 370 mini PC, **64 GB** | 64 GB DDR5 (shared) | gpt-oss-20b, Qwen3‑30B‑A3B / Qwen3‑Coder‑30B‑A3B (MoE) | Small scripts, fixes, explanations | ~8–12 W / 45–65 W | often 19 V barrel or USB‑C | 600–1,000 |
+| **2 — Sweet spot ★** | **Ryzen AI Max+ 395 "Strix Halo", 128 GB** (Framework Desktop, GMKtec EVO‑X2, Beelink, etc.) | 128 GB unified, ~96 GB+ usable for AI | **gpt-oss-120b**, GLM‑4.5‑Air‑class, 70B dense | **Real multi-file projects** with an agent (slower than cloud, but it works) | ~10–15 W / 60–140 W (adjustable TDP) | varies — **pick a DC-input model** | 1,800–2,800 |
+| **3 — Max** | **NVIDIA DGX Spark** (GB10), 128 GB | 128 GB unified + CUDA | same size class as Tier 2, **much faster prompt processing** | Best for coding agents with big context | low idle / up to ~240 W | **USB‑C PD** (great for a deck) | 3,500–4,500 |
+| Alt — efficiency | Mac mini M4 Pro 64 GB / Mac Studio M4 Max 128 GB | unified, high bandwidth | Tier 2 class (Studio) | Good | very low idle | **AC only** (needs inverter) | 2,000–4,000+ |
+
+**Recommendation: Tier 2, 128 GB.** Best intelligence per watt per dollar, x86 (runs anything, including Windows if ever needed), adjustable power limit for battery mode. Get **128 GB, not 64**: memory is the ceiling, and you can't upgrade it later (it's soldered). Tier 3 is worth it only if offline coding is a top priority and the budget allows.
+
+**Run two models:** a small fast one (e.g. 20–30B MoE) always loaded for quick questions at low power, and the big one loaded on demand for hard problems and coding.
+
+Offline coding agents to pair with the local model: open-source terminal agents (aider, opencode, etc.) pointed at llama.cpp's OpenAI-compatible server. Expect quality roughly like cloud AI from a generation or two back: genuinely useful, but it needs more hand-holding.
 
 Notes:
 - **Mac mini has an internal AC power supply** — needs AC (inverter or power station), which wastes power in a 12 V deck. Strix Halo boxes vary (some AC, some DC brick), so **check the power input before buying**.
@@ -81,12 +91,43 @@ Notes:
 | **Mk III:** ham radio + **Digirig** interface | Technician/General | 150–700 | Winlink radio email, APRS, JS8Call long-distance text |
 | Roll-up J‑pole antenna (2 m/70 cm) | — | 20–40 | Hang it high, huge range boost |
 
-### 7. Power
-- **Simple and safe (Mk I/II):** the deck has **one XT60 or Anderson input**; feed it from an external LiFePO4 power station + solar. Small internal LiFePO4 pack as a UPS (bridge power while you swap sources)
-- **Integrated (Mk II/III):** **12 V LiFePO4 pack** (20–50 Ah ≈ 256–640 Wh) with BMS → **fused distribution block** → buck converters (12 V → 5 V/USB‑C PD for screen, router, radios) + 12 V → 19/20 V for the computer
-- **Master switch, inline fuse per circuit, volt/amp/Wh meter** on the panel
+### 7. Power — deck has its own battery, takes solar directly
+**System:** the big EcoFlow + solar panel = base station (stays out of the box). The deck has its **own LiFePO4 battery** and **one rugged DC input** that accepts **either** the solar panel **or** the EcoFlow.
+
+```
+ solar panel (MC4) ──► MC4→XT60 adapter ─┐
+                                         ├─► [DECK DC INPUT, XT60 bulkhead]
+ EcoFlow DC out (12 V car port / USB‑C) ─┘            │
+                                              charger/MPPT (built in or Victron)
+                                                      │
+                                              LiFePO4 battery (BMS)
+                                                      │
+                                   master switch → fuse block → loads
+                                   (USB‑C PD: screen, router, compute if USB‑C)
+                                   (12 V: radios, fans  ·  19–20 V boost: compute if barrel)
+```
+
+**Option A — small LiFePO4 power station inside the case (recommended first)**
+- 250–300 Wh LiFePO4 unit with a solar (XT60) input + strong USB‑C PD outputs (EcoFlow River 3‑class, Anker SOLIX C300 DC‑class). Built-in MPPT, BMS, and protections: plug-and-play and safe
+- Wire its solar input to the deck's XT60 bulkhead, its outputs to the internal loads
+- Trade-offs: bulkier, fixed outputs, its own fan/heat
+
+**Option B — DIY 12 V system (Mk III / hobby)**
+- 12 V LiFePO4 pack, 20–50 Ah (≈256–640 Wh), with BMS
+- **Victron SmartSolar 75/15 MPPT** (handles panels up to 75 V open-circuit; **check your panel's Voc label**)
+- Fused distribution block, master switch, shunt meter (Wh in/out), buck converters (USB‑C PD) + a boost converter for 19–20 V compute
+- Most customizable and repairable, more to build
+
+**Runtime math (300 Wh deck battery, rough):**
+| Use | Draw | Runtime |
+|---|---|---|
+| Library + maps server, router, screen dimmed | ~25–35 W | ~8–10 h |
+| + occasional AI questions | ~40–60 W avg | ~5–6 h |
+| Heavy AI / vibecoding session | ~100–150 W | ~2–3 h |
+The EcoFlow then refills the deck; solar refills the EcoFlow (or the deck directly).
+
 - LiFePO4 only (much safer chemistry inside a sealed box)
-- Budget: library + router + screen ~20–40 W; AI bursts add 50–140 W. Run the AI in bursts
+- **Prefer a compute box with USB‑C PD or 19–20 V DC input.** AC-only machines need an inverter: ~10–20% wasted
 
 ### 8. Other critical tools (onboard)
 - [ ] **USB GPS receiver**: your position on offline maps, **and accurate time with no internet**
