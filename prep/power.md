@@ -3,8 +3,8 @@
 ## Power budget (fill in with real measurements from a watt meter)
 | Device | Idle (W) | Working (W) | Hours/day | Wh/day |
 |---|---|---|---|---|
-| NOMAD laptop (browsing) | ? | ? (~35–60 est.) | ? | ? |
-| NOMAD laptop (AI query bursts) | — | ? (~60–150 est.) | ? | ? |
+| Hub laptop (browsing) | ? | ? (~35–60 est.) | ? | ? |
+| Hub laptop (AI query bursts) | — | ? (~60–150 est.) | ? | ? |
 | Travel router | ~3–6 | ~5 | 24 | ~120 |
 | Phones (each) | — | ~5–10 while charging | ~2 | ~15 |
 | Meshtastic node | <1 | ~1 | 24 | ~5–15 |

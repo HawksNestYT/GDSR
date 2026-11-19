@@ -6,7 +6,7 @@ Electronics fail and run out of power. Paper doesn't. Put this in a 3-ring binde
 - [ ] Family contact list (phone numbers, addresses — memorize-proof)
 - [ ] Meet-up locations (primary, secondary, out-of-area)
 - [ ] Radio plan: which channels/frequencies, check-in times ([comms.md](comms.md))
-- [ ] NOMAD Wi‑Fi name, password, IP address
+- [ ] Hub Wi‑Fi name, password, IP address
 
 ## Section 2 — Medical (print from Hesperian / Red Cross / WikiMed)
 - [ ] CPR + choking (adult, child, infant)
@@ -34,6 +34,6 @@ Electronics fail and run out of power. Paper doesn't. Put this in a 3-ring binde
 - [ ] Routes out of town (2–3 options)
 
 ## Section 6 — Tech recovery
-- [ ] How to boot and use the NOMAD box (1 page, plain English)
+- [ ] How to boot and use the hub server (1 page, plain English)
 - [ ] How to set up Meshtastic on a new phone
 - [ ] Where the backup drive and APK installers are

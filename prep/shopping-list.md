@@ -8,7 +8,7 @@ Prices are rough estimates. Priority **A** = buy now · **B** = within a month �
 | ⬜ | 2× 20,000 mAh USB‑C PD power banks | 0/2 | A | 30–50 ea | |
 | ⬜ | NOAA hand-crank weather radio | 2 | A | 30–60 | |
 | ⬜ | 3-ring binder + sheet protectors + printing | 0 | A | 20 | |
-| ⬜ | 2 TB NVMe SSD (NOMAD laptop) | 1 | A | 100–150 | Confirm the M.2 slot type |
+| ⬜ | 2 TB NVMe SSD (Hub laptop) | 1 | A | 100–150 | Confirm the M.2 slot type |
 | ⬜ | USB stick 16 GB+ (Ubuntu installer) | 1 | A | 10 | |
 | ⬜ | GL.iNet travel router (Beryl AX class) | 1 | A | 70–100 | |
 | ⬜ | Meshtastic nodes ×2–4 | 2 | A | 30–60 ea | T1000‑E / T‑Echo / Heltec V3 |

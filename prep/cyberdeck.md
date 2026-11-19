@@ -4,7 +4,7 @@
 1. **Modular:** every part can be unplugged and replaced without tools (USB‑C, HDMI, barrel jacks; no soldered-in parts on the critical path)
 2. **Degrades gracefully:** if the screen dies, use any HDMI display or a phone browser. If the computer dies, the phones still have the core library. If the battery dies, use wall or solar power
 3. **Rugged:** hard case, foam or 3D-printed mounts, strain relief on every cable
-4. **Self-documenting:** label every port, and tape the NOMAD Wi‑Fi info + quick-start card inside the lid
+4. **Self-documenting:** label every port, and tape the hub Wi‑Fi info + quick-start card inside the lid
 
 ## Build path
 ### Mk I — "Laptop in a box" (cheapest, do this first)

@@ -2,7 +2,7 @@
 
 What to download, and where each copy lives. Sizes are approximate and change with each release. Check them when you download.
 
-Legend for locations: **N** = NOMAD laptop · **M** = MacBook · **P** = main phone · **T** = tablet · **B** = backup phones · **D** = cold-storage drive (metal box)
+Legend for locations: **N** = laptop hub server · **M** = MacBook · **P** = main phone · **T** = tablet · **B** = backup phones · **D** = cold-storage drive (metal box)
 
 ## Encyclopedic (Kiwix ZIM files — library.kiwix.org)
 | Content | Approx size | N | M | P | T | B | D |
@@ -14,7 +14,7 @@ Legend for locations: **N** = NOMAD laptop · **M** = MacBook · **P** = main ph
 | iFixit | varies | ⬜ | ⬜ | | ⬜ | | ⬜ |
 | Wikibooks / Wikivoyage | varies | ⬜ | | | ⬜ | | ⬜ |
 | Stack Exchange (diy, gardening, electronics, ham radio, cooking) | varies | ⬜ | | | | | ⬜ |
-| Khan Academy (via NOMAD) | large | ⬜ | | | | | ⬜ |
+| Khan Academy (ZIM) | large | ⬜ | | | | | ⬜ |
 
 ## Free PDFs / books (legally free)
 | Item | Source | Copies |
@@ -34,7 +34,7 @@ Legend for locations: **N** = NOMAD laptop · **M** = MacBook · **P** = main ph
 | Content | Where | Done |
 |---|---|---|
 | Organic Maps / OsmAnd: home state + neighbors | P, T, B | ⬜ |
-| NOMAD maps: region or planet | N | ⬜ |
+| PMTiles: region (laptop: state/country; planet if space) | N | ⬜ |
 | Paper road atlas + local topo map (USGS) | binder | ⬜ |
 
 ## AI models
@@ -46,7 +46,7 @@ Legend for locations: **N** = NOMAD laptop · **M** = MacBook · **P** = main ph
 | Also save the **installers** for Ollama/LM Studio/Kiwix | — | D |
 
 ## Personal docs (encrypted!)
-Store copies of IDs, insurance, deeds, prescriptions, medical history, and contact lists in an **encrypted** container (VeraCrypt, or an encrypted disk image on the Mac), on D and one phone. Never leave this unencrypted on a shared NOMAD box.
+Store copies of IDs, insurance, deeds, prescriptions, medical history, and contact lists in an **encrypted** container (VeraCrypt, or an encrypted disk image on the Mac), on D and one phone. Never leave this unencrypted on a shared hub server.
 
 ## Update schedule
 - [ ] Quarterly: refresh ZIMs, maps, and models on N; copy the updates to D

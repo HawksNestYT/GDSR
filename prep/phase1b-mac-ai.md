@@ -1,10 +1,10 @@
 # Phase 1b — MacBook: Offline AI + Library Copy #2
 
-NOMAD itself doesn't support Apple Silicon. You don't need it to: the Mac can run the same building blocks directly, and on Apple Silicon local AI is fast and power-efficient.
+The Mac runs the same stack ([stack.md](stack.md)) with llama.cpp on Apple Metal, which is fast and power-efficient. LM Studio / Ollama are handy extras for trying out models.
 
 ## AI (pick one or both)
 - [ ] **LM Studio** (lmstudio.ai) — easiest, a GUI with a built-in model browser
-- [ ] **Ollama** (ollama.com) — what NOMAD uses under the hood; can also serve AI to other devices on your network
+- [ ] **Ollama** (ollama.com) — can also serve AI to other devices on your network
   ```bash
   # after installing the Ollama app
   ollama pull llama3.1:8b
@@ -24,7 +24,7 @@ NOMAD itself doesn't support Apple Silicon. You don't need it to: the Mac can ru
 Download 2–3 models of different sizes: a small fast one, and the largest that runs smoothly.
 
 ## Library copy #2
-- [ ] **Kiwix desktop** for Mac + the same ZIMs as the NOMAD box (or at least WikiMed, Wikipedia, survival packs)
+- [ ] **Kiwix desktop** for Mac + the same ZIMs as the laptop hub (or at least WikiMed, Wikipedia, survival packs)
 - [ ] **Offline maps:** Organic Maps on the Mac (via the iPad app on Apple Silicon) or keep the map files on the phones
 - [ ] Keep the PDF folder synced (copy, don't rely on iCloud)
 

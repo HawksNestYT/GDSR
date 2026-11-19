@@ -4,9 +4,9 @@ Fill in the `?` fields. Specs decide which AI models and how much content each d
 
 | Device | Model | Chip | RAM | Storage | SD slot? | Role | Status |
 |---|---|---|---|---|---|---|---|
-| Windows laptop (busted screen) | ? | ? (Intel/AMD) | ? | ? | n/a | **NOMAD server** (main hub) | ⬜ |
+| Windows laptop (busted screen) | ? | ? (Intel/AMD) | ? | ? | n/a | **Main hub server** (our stack, CUDA) | ⬜ |
 | MacBook | ? | ? (M1/M2/M3/M4?) | ? | ? | n/a | **Best offline AI** + library copy #2 | ⬜ |
-| Samsung phone | ? | ? | ? | ? | ? | Pocket library + maps + NOMAD client | ⬜ |
+| Samsung phone | ? | ? | ? | ? | ? | Pocket hub (Termux + our stack) + client | ⬜ |
 | Samsung tablet(s) | ? | ? | ? | ? | ? | Big-screen library, reading, maps | ⬜ |
 | OnePlus | ? | ? | ? | ? | ? | Backup library (drawer / metal box) | ⬜ |
 | Razer phone | ? | ? | ? | ? | ? | Backup library / Meshtastic messenger | ⬜ |
@@ -26,5 +26,5 @@ Fill in the `?` fields. Specs decide which AI models and how much content each d
 | 48 GB+ Mac | 32–70B | Excellent |
 
 ## Why each device has the role it has
-- **Project NOMAD only runs on x86 (Intel/AMD)**, so the Windows laptop is the only device here that can run it. The Mac and the phones are ARM.
-- Phones are worth more as **independent working devices** than as hacked Linux boxes. You *can* run Debian on Android (Termux + `proot-distro`), but it's slow, and nothing it offers here is better than the native apps. Keep it as a hobby side quest.
+- We build our own stack ([stack.md](stack.md)) on llama.cpp + kiwix-serve + PMTiles, which run on x86 **and** ARM, so every device runs the same thing at its own scale.
+- Phones: debloated Android + Termux runs the stack at full speed. See [phone-linux.md](phone-linux.md) for the options, including a true Linux phone (postmarketOS) on a supported OnePlus.

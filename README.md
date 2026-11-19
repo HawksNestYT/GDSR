@@ -15,8 +15,9 @@ Planning, prepping, and build log for an offline knowledge and comms setup that 
 
 | Phase | What | Status |
 |---|---|---|
-| 0 | Phones and tablets as offline libraries, printed binder | ⬜ Not started |
-| 1 | 2070 laptop → Project NOMAD server + travel router | ⬜ Not started |
+| 0 | Phones and tablets as offline libraries (apps first), printed binder | ⬜ Not started |
+| 0b | Phones → debloated + Termux Linux, our stack running on the phone | ⬜ Not started |
+| 1 | 2070 laptop → main hub server (our own stack) + travel router | ⬜ Not started |
 | 1b | MacBook → offline AI + second library copy | ⬜ Not started |
 | 2 | Power (power station + solar) | ⬜ Not started |
 | 2 | Comms (Meshtastic, GMRS, NOAA radio, ham later) | ⬜ Not started |
@@ -29,7 +30,9 @@ Update the status emoji as you go: ⬜ not started · 🟨 in progress · ✅ do
 |---|---|
 | [prep/inventory.md](prep/inventory.md) | Devices you own, specs, and the job each one has |
 | [prep/phase0-phones.md](prep/phase0-phones.md) | Turn phones and tablets into offline libraries this week |
-| [prep/phase1-nomad-server.md](prep/phase1-nomad-server.md) | Step-by-step: 2070 laptop → NOMAD box |
+| [prep/stack.md](prep/stack.md) | **Our own offline stack:** architecture, components, AI design, milestones |
+| [prep/phone-linux.md](prep/phone-linux.md) | Linux on the phones: options, Samsung debloat + Termux, OnePlus postmarketOS |
+| [prep/phase1-laptop-server.md](prep/phase1-laptop-server.md) | Step-by-step: 2070 laptop → main hub server |
 | [prep/phase1b-mac-ai.md](prep/phase1b-mac-ai.md) | Local AI on the MacBook |
 | [prep/content-manifest.md](prep/content-manifest.md) | What to download, approximate sizes, and where each copy lives |
 | [prep/print-binder.md](prep/print-binder.md) | What to print. Paper still works with no power at all |
