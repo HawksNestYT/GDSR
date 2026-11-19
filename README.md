@@ -32,6 +32,7 @@ Update the status emoji as you go: ⬜ not started · 🟨 in progress · ✅ do
 | [prep/phase0-phones.md](prep/phase0-phones.md) | Turn phones and tablets into offline libraries this week |
 | [prep/stack.md](prep/stack.md) | **Our own offline stack:** architecture, components, AI design, milestones |
 | [prep/phone-linux.md](prep/phone-linux.md) | Linux on the phones: options, Samsung debloat + Termux, OnePlus postmarketOS |
+| [prep/dev-workflow.md](prep/dev-workflow.md) | How we vibecode the stack from the phone (cloud agent → GitHub → git pull) |
 | [prep/phase1-laptop-server.md](prep/phase1-laptop-server.md) | Step-by-step: 2070 laptop → main hub server |
 | [prep/phase1b-mac-ai.md](prep/phase1b-mac-ai.md) | Local AI on the MacBook |
 | [prep/content-manifest.md](prep/content-manifest.md) | What to download, approximate sizes, and where each copy lives |
