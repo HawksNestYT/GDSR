@@ -39,6 +39,7 @@ Update the status emoji as you go: ⬜ not started · 🟨 in progress · ✅ do
 | [prep/print-binder.md](prep/print-binder.md) | What to print. Paper still works with no power at all |
 | [prep/power.md](prep/power.md) | Power budget, battery, solar |
 | [prep/comms.md](prep/comms.md) | Radio and mesh comms plan, licenses |
+| [prep/deck-mk1-bom.md](prep/deck-mk1-bom.md) | **Deck Mk I parts list + total cost** (budget compute) |
 | [prep/cyberdeck.md](prep/cyberdeck.md) | The hobby build: design rules and parts |
 | [prep/shopping-list.md](prep/shopping-list.md) | Everything to buy, by phase and priority |
 | [prep/log.md](prep/log.md) | Build and test log: what you did, what broke, what you learned |
