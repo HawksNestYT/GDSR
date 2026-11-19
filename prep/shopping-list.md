@@ -24,6 +24,13 @@ Prices are rough estimates. Priority **A** = buy now · **B** = within a month �
 | ⬜ | USB‑C portable monitor 15" | 3 | C | 80–200 | |
 | ⬜ | Compact keyboard | 3 | C | 25–80 | |
 | ⬜ | Ham Technician exam + FCC fee | 4 | C | ~50 | |
-| ⬜ | RTL-SDR v4 kit | 3 | C | ~40 | |
+| ⬜ | 3D printer (Bambu A1 / P1S‑P2S class) | 3 | B | 300–900 | Enclosed if you want ASA |
+| ⬜ | Filament: PETG, ASA, TPU | 3 | B | 20–30/kg | |
+| ⬜ | RTL‑SDR Blog V4 kit | 3 | B | 40–60 | NOAA, scanner, weather sats |
+| ⬜ | USB GPS receiver | 3 | B | 15–40 | Position + offline time |
+| ⬜ | Pinecil soldering iron + mini multimeter | 3 | B | 50–80 | |
+| ⬜ | Trackball | 3 | C | 30–60 | |
+| ⬜ | XT60/Anderson bulkhead, fuse block, buck converters, meter, switch | 3 | C | 60–120 | |
+| ⬜ | Compute upgrade: Strix Halo 64–128 GB mini PC (or Mac mini M4 Pro) | 3 | C | 1,400–2,800 | Check power input |
 
 **Rough total for A-priority items:** ~$450–750 depending on how many cards and nodes you buy.
